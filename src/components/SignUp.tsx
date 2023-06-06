@@ -3,7 +3,6 @@ import "../style/css/SignUp.css";
 import axios from "axios";
 import SocialLinks from "./SocialLinks";
 import cover from "../images/cover.jpg";
-import { ImCancelCircle } from "react-icons/im";
 
 const SignUp = () => {
   const [emailField, setEmailField] = useState<HTMLInputElement>();
@@ -11,7 +10,7 @@ const SignUp = () => {
   const [emailMessage, setEmailMessage] = useState<HTMLParagraphElement>();
   const [emails, setEmails] = useState<{ email: string }[]>([]);
   const [lastEmail, setLastEmail] = useState<string>("");
-  const [ip, setIP] = useState("");
+  const [ip, setIP] = useState<string>("");
 
   const getData = async () => {
     const res = await axios.get("https://api.ipify.org?format=json");
@@ -19,6 +18,11 @@ const SignUp = () => {
   };
 
   useEffect(() => {
+    setEmailField(document.getElementById("email-field") as HTMLInputElement);
+    setEmailLabel(document.getElementById("email-label") as HTMLLabelElement);
+    setEmailMessage(
+      document.getElementById("email-message") as HTMLParagraphElement
+    );
     getData();
   }, []);
 
@@ -43,12 +47,6 @@ const SignUp = () => {
   };
 
   useEffect(() => {
-    setEmailField(document.getElementById("email-field") as HTMLInputElement);
-    setEmailLabel(document.getElementById("email-label") as HTMLLabelElement);
-    setEmailMessage(
-      document.getElementById("email-message") as HTMLParagraphElement
-    );
-
     fetchData();
   }, [ip]);
 
@@ -72,8 +70,7 @@ const SignUp = () => {
       emailField?.value !== ""
     ) {
       if (emailMessage) {
-        emailMessage.innerHTML =
-          "<ImCancelCircle /> Please enter valid email address";
+        emailMessage.innerHTML = "Please enter valid email address";
         emailMessage.style.color = "red";
         if (emailLabel) {
           emailLabel.style.top = "1px";
@@ -86,7 +83,7 @@ const SignUp = () => {
       }
     } else if (emailField?.value === "") {
       if (emailMessage) {
-        emailMessage.innerHTML = "<ImCancelCircle /> Email is required";
+        emailMessage.innerHTML = "Email is required";
         emailMessage.style.color = "red";
         if (emailLabel) {
           emailLabel.style.top = "14px";
@@ -99,8 +96,7 @@ const SignUp = () => {
       }
     } else {
       if (emailMessage) {
-        emailMessage.innerHTML =
-          "<ImCancelCircle /> Your email adress is valid";
+        emailMessage.innerHTML = "Your email adress is valid";
         emailMessage.style.color = "green";
         if (emailLabel) {
           emailLabel.style.top = "1px";
