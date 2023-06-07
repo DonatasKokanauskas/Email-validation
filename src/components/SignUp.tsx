@@ -8,9 +8,11 @@ const SignUp = () => {
   const [emailField, setEmailField] = useState<HTMLInputElement>();
   const [emailLabel, setEmailLabel] = useState<HTMLLabelElement>();
   const [emailMessage, setEmailMessage] = useState<HTMLParagraphElement>();
-  const [emails, setEmails] = useState<{ email: string }[]>([]);
   const [lastEmail, setLastEmail] = useState<string>("");
   const [ip, setIP] = useState<string>("");
+  const [apiData, setApiData] = useState<
+    { email: string; ipAddress: string }[]
+  >([]);
 
   const getData = async () => {
     const res = await axios.get("https://api.ipify.org?format=json");
@@ -38,9 +40,13 @@ const SignUp = () => {
         }
       );
 
-      if (ip === res.data.record[res.data.record.length - 1].ipAddress) {
-        setLastEmail(res.data.record[res.data.record.length - 1].email);
-      }
+      res.data.record.forEach((obj: { ipAddress: string; email: string }) => {
+        if (obj.ipAddress === ip) {
+          setLastEmail(obj.email);
+        }
+      });
+
+      setApiData(res.data.record);
     } catch (error) {
       console.log(error);
     }
@@ -116,7 +122,7 @@ const SignUp = () => {
     try {
       await axios.put(
         "https://api.jsonbin.io/v3/b/647de7488e4aa6225ea98f9f",
-        emails,
+        apiData,
         {
           headers: {
             "content-type": "application/json",
@@ -141,7 +147,12 @@ const SignUp = () => {
       ) &&
       emailField?.value !== ""
     ) {
-      setEmails((current) => [...current, { email, ipAddress: ip }]);
+      setApiData(() => {
+        return [
+          ...apiData.filter((obj) => obj.ipAddress !== ip),
+          { email: email, ipAddress: ip },
+        ];
+      });
     }
   };
 
