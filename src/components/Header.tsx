@@ -9,9 +9,6 @@ const Header: React.FC = () => {
 
   useEffect(() => {
     setNav(document.querySelector("nav"));
-  }, []);
-
-  useEffect(() => {
     const handleWindowResize = () => {
       setWindowSize(window.innerWidth);
     };

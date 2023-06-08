@@ -2,6 +2,19 @@
   display: flex;
   align-items: center;
 }
+@mixin mobile-nav {
+  display: block;
+  height: 0;
+  flex-direction: column;
+  width: 100%;
+  background-color: #ffffff;
+  transition: height 0.25s linear;
+  overflow-y: hidden;
+}
+@mixin mobile-a-fontWeight-color {
+  font-weight: 600;
+  color: #656565 !important;
+}
 $link-color: #f0f0f0;
 $hovered-link: #31ae85;
 
@@ -76,7 +89,6 @@ nav {
   display: none;
   user-select: none;
   position: absolute;
-  top: 31px;
   right: 12%;
 
   input {
@@ -137,21 +149,14 @@ nav {
     }
 
     nav {
-      display: block;
-      height: 0;
-      flex-direction: column;
-      width: 100%;
-      background-color: #ffffff;
-      transition: height 0.25s linear;
-      overflow-y: hidden;
+      @include mobile-nav;
       ul {
         flex-direction: column;
         li {
           padding: 4px 0;
           a {
             font-size: 6vw !important;
-            font-weight: 600;
-            color: #656565 !important;
+            @include mobile-a-fontWeight-color;
           }
         }
       }
@@ -178,21 +183,14 @@ nav {
     }
 
     nav {
-      display: block;
-      height: 0;
-      flex-direction: column;
-      width: 100%;
-      background-color: #ffffff;
-      transition: height 0.25s linear;
-      overflow-y: hidden;
+      @include mobile-nav;
       ul {
         flex-direction: column;
         li {
           padding: 4px 0;
           a {
             font-size: 4.5vw !important;
-            font-weight: 600;
-            color: #656565 !important;
+            @include mobile-a-fontWeight-color;
           }
         }
       }
@@ -219,21 +217,14 @@ nav {
     }
 
     nav {
-      display: block;
-      height: 0;
-      flex-direction: column;
-      width: 100%;
-      background-color: #ffffff;
-      transition: height 0.25s linear;
-      overflow-y: hidden;
+      @include mobile-nav;
       ul {
         flex-direction: column;
         li {
           padding: 4px 0;
           a {
-            font-size: 3vw !important;
-            font-weight: 600;
-            color: #656565 !important;
+            font-size: 3.5vw !important;
+            @include mobile-a-fontWeight-color;
           }
         }
       }
@@ -260,21 +251,14 @@ nav {
     }
 
     nav {
-      display: block;
-      height: 0;
-      flex-direction: column;
-      width: 100%;
-      background-color: #ffffff;
-      transition: height 0.25s linear;
-      overflow-y: hidden;
+      @include mobile-nav;
       ul {
         flex-direction: column;
         li {
           padding: 4px 0;
           a {
-            font-size: 2.5vw !important;
-            font-weight: 600;
-            color: #656565 !important;
+            font-size: 2.8vw !important;
+            @include mobile-a-fontWeight-color;
           }
         }
       }
@@ -301,21 +285,14 @@ nav {
     }
 
     nav {
-      display: block;
-      height: 0;
-      flex-direction: column;
-      width: 100%;
-      background-color: #ffffff;
-      transition: height 0.25s linear;
-      overflow-y: hidden;
+      @include mobile-nav;
       ul {
         flex-direction: column;
         li {
           padding: 4px 0;
           a {
             font-size: 2.2vw !important;
-            font-weight: 600;
-            color: #656565 !important;
+            @include mobile-a-fontWeight-color;
           }
         }
       }

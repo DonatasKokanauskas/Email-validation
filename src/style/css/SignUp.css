@@ -97,35 +97,7 @@
   white-space: nowrap;
 }
 
-@media screen and (min-width: 100px) and (max-width: 199px) {
-  .sign-up .input-container {
-    width: 100%;
-    left: 0%;
-    right: 0%;
-  }
-  .sign-up .input-container h1 {
-    font-size: 5vw;
-    margin-bottom: 28px;
-  }
-  .sign-up .input-container p {
-    font-size: 4vw;
-    margin-bottom: 12px;
-  }
-  .sign-up .input-container form #email-field {
-    height: 32px !important;
-    font-size: 3.5vw;
-  }
-  .sign-up .input-container form button {
-    height: 32px !important;
-    width: 53%;
-    font-size: 3.5vw;
-    right: -18px;
-  }
-  .sign-up .input-container form #email-label {
-    font-size: 3.5vw;
-  }
-}
-@media screen and (max-width: 159px) {
+@media screen and (max-width: 109px) {
   .sign-up .input-container {
     width: 100%;
     left: 0%;
@@ -143,23 +115,62 @@
     width: 72%;
   }
   .sign-up .input-container form #email-field {
-    height: 38px;
+    height: 30px;
     font-size: 4.5vw;
+    padding-right: 25vw;
+    width: 90%;
   }
   .sign-up .input-container form button {
-    height: 38px;
-    width: 53%;
+    height: 30px;
+    width: 60%;
     font-size: 4.5vw;
-    right: -18px;
+    right: -14px;
   }
   .sign-up .input-container form #email-label {
     font-size: 4.5vw;
+    top: 2px !important;
   }
   .sign-up .input-container form #email-message {
     font-size: 4.5vw;
   }
 }
-@media screen and (min-width: 160px) and (max-width: 269px) {
+@media screen and (min-width: 110px) and (max-width: 159px) {
+  .sign-up .input-container {
+    width: 100%;
+    left: 0%;
+    right: 0%;
+  }
+  .sign-up .input-container h1 {
+    font-size: 6vw;
+    margin-bottom: 28px;
+  }
+  .sign-up .input-container p {
+    font-size: 5vw;
+    margin-bottom: 12px;
+  }
+  .sign-up .input-container form {
+    width: 72%;
+  }
+  .sign-up .input-container form #email-field {
+    height: 30px;
+    font-size: 4.5vw;
+    padding-right: 20vw;
+  }
+  .sign-up .input-container form button {
+    height: 30px;
+    width: 52%;
+    font-size: 4.5vw;
+    right: -15px;
+  }
+  .sign-up .input-container form #email-label {
+    font-size: 4.5vw;
+    top: 2px !important;
+  }
+  .sign-up .input-container form #email-message {
+    font-size: 4.5vw;
+  }
+}
+@media screen and (min-width: 160px) and (max-width: 199px) {
   .sign-up .input-container {
     width: 100%;
     left: 0%;
@@ -177,17 +188,55 @@
     width: 72%;
   }
   .sign-up .input-container form #email-field {
-    height: 38px;
+    height: 32px;
     font-size: 4vw;
+    padding-right: 17vw;
   }
   .sign-up .input-container form button {
-    height: 38px;
-    width: 53%;
+    height: 32px;
+    width: 48%;
     font-size: 4vw;
     right: -18px;
   }
   .sign-up .input-container form #email-label {
+    top: 2px !important;
     font-size: 4vw;
+  }
+  .sign-up .input-container form #email-message {
+    font-size: 4vw;
+  }
+}
+@media screen and (min-width: 200px) and (max-width: 269px) {
+  .sign-up .input-container {
+    width: 100%;
+    left: 0%;
+    right: 0%;
+  }
+  .sign-up .input-container h1 {
+    font-size: 5.5vw;
+    margin-bottom: 28px;
+  }
+  .sign-up .input-container p {
+    font-size: 4.5vw;
+    margin-bottom: 12px;
+  }
+  .sign-up .input-container form {
+    width: 72%;
+  }
+  .sign-up .input-container form #email-field {
+    height: 35px;
+    font-size: 4vw;
+    padding-right: 17vw;
+  }
+  .sign-up .input-container form button {
+    height: 35px;
+    width: 48%;
+    font-size: 4vw;
+    right: -18px;
+  }
+  .sign-up .input-container form #email-label {
+    top: 2px !important;
+    font-size: 3.8vw;
   }
   .sign-up .input-container form #email-message {
     font-size: 4vw;

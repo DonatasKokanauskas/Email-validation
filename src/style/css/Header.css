@@ -69,7 +69,6 @@ nav ul:nth-of-type(2) li:nth-of-type(2):hover a {
   display: none;
   user-select: none;
   position: absolute;
-  top: 31px;
   right: 12%;
 }
 .burger input {
@@ -217,7 +216,7 @@ nav ul:nth-of-type(2) li:nth-of-type(2):hover a {
     padding: 4px 0;
   }
   header nav ul li a {
-    font-size: 3vw !important;
+    font-size: 3.5vw !important;
     font-weight: 600;
     color: #656565 !important;
   }
@@ -256,7 +255,7 @@ nav ul:nth-of-type(2) li:nth-of-type(2):hover a {
     padding: 4px 0;
   }
   header nav ul li a {
-    font-size: 2.5vw !important;
+    font-size: 2.8vw !important;
     font-weight: 600;
     color: #656565 !important;
   }
