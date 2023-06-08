@@ -158,7 +158,6 @@ const SignUp = () => {
 
   return (
     <div className="sign-up">
-      <img src={cover} alt="cover image" />
       <div className="input-container">
         <h1>We help you manage your website successfully!</h1>
         <p>Please enter your email address</p>
