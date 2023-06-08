@@ -54,9 +54,10 @@
   }
   .social-links ul li a {
     padding: 5px;
+    text-align: center;
   }
   .social-links ul li a:hover {
-    padding: 5px 0px;
+    padding: 0px 5px;
   }
 }
 @media screen and (min-width: 165px) and (max-width: 225px) {
@@ -73,9 +74,10 @@
   }
   .social-links ul li a {
     padding: 7px;
+    text-align: center;
   }
   .social-links ul li a:hover {
-    padding: 7px 0px;
+    padding: 0px 7px;
   }
 }
 @media screen and (min-width: 225px) and (max-width: 309px) {
@@ -92,9 +94,10 @@
   }
   .social-links ul li a {
     padding: 10px;
+    text-align: center;
   }
   .social-links ul li a:hover {
-    padding: 10px 0px;
+    padding: 0px 10px;
   }
 }
 @media screen and (min-width: 310px) and (max-width: 429px) {
@@ -111,9 +114,10 @@
   }
   .social-links ul li a {
     padding: 15px;
+    text-align: center;
   }
   .social-links ul li a:hover {
-    padding: 15px 0px;
+    padding: 0px 15px;
   }
 }
 @media screen and (min-width: 430px) and (max-width: 569px) {
@@ -130,9 +134,10 @@
   }
   .social-links ul li a {
     padding: 17px;
+    text-align: center;
   }
   .social-links ul li a:hover {
-    padding: 17px 0px;
+    padding: 0px 15px;
   }
 }
 @media screen and (min-width: 570px) and (max-width: 649px) {
