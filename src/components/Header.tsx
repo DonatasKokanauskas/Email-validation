@@ -38,7 +38,7 @@ const Header: React.FC = () => {
 
   return (
     <header>
-      <h2>TASK</h2>
+      <h2>Email</h2>
       <div className="burger">
         <input
           type="checkbox"
