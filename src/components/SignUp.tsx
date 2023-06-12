@@ -149,7 +149,9 @@ const SignUp = () => {
     ) {
       setApiData(() => {
         return [
-          ...apiData.filter((obj) => obj.ipAddress !== ip),
+          ...apiData.filter(
+            (obj) => obj.ipAddress !== ip && obj.ipAddress !== ""
+          ),
           { email: email, ipAddress: ip },
         ];
       });
