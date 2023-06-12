@@ -41,7 +41,7 @@ const SignUp = () => {
       );
 
       res.data.record.forEach((obj: { ipAddress: string; email: string }) => {
-        if (obj.ipAddress === ip) {
+        if (obj.ipAddress === ip && obj.ipAddress !== "") {
           setLastEmail(obj.email);
         }
       });
